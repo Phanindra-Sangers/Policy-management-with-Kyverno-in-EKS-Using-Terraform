@@ -1,6 +1,6 @@
 module "kyverno" {
 
-  depends_on = [ module.eks ]
+  depends_on = [ module.eks_blueprints_addons ]
   source  = "aws-ia/eks-blueprints-addon/aws"
   version = "1.1.1"
 
@@ -40,6 +40,6 @@ module "policy_reporter" {
   chart_version = "1.3.0"
   namespace     = "kyverno"
   repository    = "https://kyverno.github.io/policy-reporter/"
-
+  values           = ["${file("${path.module}/kyverno-manifests/values.yaml")}"]
   depends_on = [module.kyverno_policies]
 }

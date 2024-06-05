@@ -19,3 +19,4 @@ The pattern object defines what pattern will be checked in the resource. In this
 The Above Example Policy, will block any Pod Creation which doesn't have the label CostCenter.
 
 
+kubectl get policyreports -A
