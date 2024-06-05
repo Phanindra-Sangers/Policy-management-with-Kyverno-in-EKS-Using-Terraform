@@ -12,8 +12,8 @@ spec:
               kinds:
                 - Pod
       validate:
-        message: "Label 'Name' is required to deploy the Pod"
+        message: "Label 'Author' is required to deploy the Pod"
         pattern:
           metadata:
             labels:
-              Name: "?*"
+              Author: "?*"
