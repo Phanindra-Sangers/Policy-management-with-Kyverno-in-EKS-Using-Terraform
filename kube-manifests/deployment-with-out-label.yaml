@@ -65,7 +65,7 @@ spec:
               name: tmp-volume
       securityContext:
         fsGroup: 1000
-      serviceAccountName: ui
+      serviceAccountName: default
       volumes:
         - emptyDir:
             medium: Memory
